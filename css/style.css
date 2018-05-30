@@ -15,7 +15,7 @@ nav {
     color: #121117;
     font-size: 18px;
     line-height: 24px; }
-  nav .ml-auto i.fa {
+  nav .ml-auto i.fab {
     font-size: 30px;
     margin-left: 15px; }
   nav .ml-auto button.dropdown-button {
@@ -48,8 +48,8 @@ nav {
     color: white; }
 
 #main .row .col-md-4 {
-  padding-left: 4px;
-  padding-right: 4px; }
+  padding-left: 8px;
+  padding-right: 8px; }
 #main a {
   position: relative; }
   #main a:hover .item-info {
@@ -112,5 +112,51 @@ nav {
     color: black; }
     #content .videos a:hover {
       text-decoration: none; }
+  #content .post-all {
+    margin-bottom: 20px; }
+  #content .category-name h3 {
+    font-size: 24px; }
+  #content .category-name a {
+    color: black; }
+    #content .category-name a:hover {
+      text-decoration: none; }
+  #content .most-viewed-header {
+    margin-left: 10px; }
+    #content .most-viewed-header h2 {
+      font-size: 24px; }
+    #content .most-viewed-header .most-viewed-icon {
+      margin-left: 20px;
+      margin-right: 20px;
+      color: #c82333; }
+  #content .post-view-count, #content .post-time {
+    color: #949494;
+    line-height: 16px;
+    font-size: 13px; }
+  #content .post-title h2 {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    transition: color 0.3s ease-in-out; }
+    #content .post-title h2:hover {
+      color: #c82333; }
+  #content .card-body {
+    padding-bottom: 10px;
+    padding-top: 10px; }
+  #content a {
+    color: black; }
+    #content a:hover {
+      text-decoration: none; }
+  #content .col-md-11.most-viewed-post {
+    margin-top: 20px; }
+
+.social .fab {
+  background-color: #eee;
+  padding: 30px;
+  font-size: 25px;
+  color: #5a6268; }
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px; } }
 
 /*# sourceMappingURL=style.css.map */

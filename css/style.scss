@@ -23,7 +23,7 @@ nav{
   }
 
   .ml-auto{
-    i.fa{
+    i.fab{
       font-size: 30px;
       margin-left: 15px ;
     }
@@ -82,8 +82,8 @@ nav{
 
   .row{
     .col-md-4{
-      padding-left: 4px;
-      padding-right: 4px;
+      padding-left: 8px;
+      padding-right: 8px;
     }
   }
   a{
@@ -198,4 +198,88 @@ nav{
       }
     }
   }
+
+  .post-all{
+    margin-bottom: 20px;
+  }
+
+  .category-name{
+
+
+    h3{
+      font-size: 24px;
+    }
+    a{
+      color: black;
+
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+
+  .most-viewed-header{
+    margin-left: 10px;
+
+    h2{
+      font-size: 24px;
+    }
+
+    .most-viewed-icon{
+      margin-left: 20px;
+      margin-right: 20px;
+      color: #c82333;
+    }
+  }
+
+  .post-view-count, .post-time{
+    color: #949494;
+    line-height: 16px;
+    font-size: 13px
+
+  }
+
+  .post-title h2{
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    transition: color 0.3s ease-in-out;
+
+    &:hover{
+      color: #c82333;
+    }
+  }
+
+  .card-body{
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+  }
+  a{
+    color: black;
+
+    &:hover{
+      text-decoration: none;
+    }
+  }
+
+  .col-md-11.most-viewed-post{
+    margin-top: 20px;
+  }
+}
+
+.social{
+  .fab{
+    background-color: #eee;
+    padding: 30px;
+    font-size: 25px;
+    color: #5a6268;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+
 }
