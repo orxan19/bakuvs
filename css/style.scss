@@ -1,0 +1,72 @@
+body{
+  font-family: Raleway;
+}
+
+.centered{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav{
+  background-color: white;
+
+  .logo{
+    height: 50px;
+    display: block;
+  }
+
+  .navbar-nav .nav-link{
+    color: #121117;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .ml-auto{
+    i.fa{
+      font-size: 30px;
+      margin-left: 15px ;
+    }
+
+    button.dropdown-button{
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      margin-right: 20px;
+      font-size: 30px;
+
+
+      &:focus{
+        outline: none;
+      }
+    }
+
+    .nav-flag{
+      height: 30px;
+      margin-left: 25px;
+    }
+  }
+
+  .dropdown{
+    position: relative;
+  }
+
+.dropdown-content{
+  transform: scale(0);
+  position: absolute;
+  min-width: 260px;
+  top: 30px;
+  height: 50px;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: left;
+}
+
+  .transform-scale{
+    transform: scale(1);
+  }
+  button.fa-check{
+    background-color: #28a745;
+  }
+
+}
