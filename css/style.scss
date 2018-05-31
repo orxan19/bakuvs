@@ -28,11 +28,19 @@ nav{
     display: block;
   }
 
+  .navbar-social{
+    a{
+      color: black;
+    }
+  }
+
   .navbar-nav .nav-link{
     color: #121117;
     font-size: 18px;
     line-height: 24px;
     transition: color 0.3s;
+
+
 
     &:hover{
       color: #c82333;
@@ -70,20 +78,35 @@ nav{
   }
 
 .dropdown-content{
-  transform: scale(0);
+  transform: scale(0) translateY(-30px);
+
   position: absolute;
   min-width: 260px;
   top: 30px;
-  height: 50px;
   z-index: 1;
   transition: transform 0.3s ease-in-out;
-  transform-origin: left;
+  transform-origin: top left;
+
+  input{
+    &:focus{
+      outline: none;
+    }
+  }
+  .dropdown-content-input{
+    padding: 20px 10px;
+    width: 250px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+
+
+  }
+
 }
 
   .transform-scale{
-    transform: scale(1);
+    transform: scale(1) translateY(0px);
   }
-  button.fa-check{
+  button.confirm{
     background-color: #28a745;
     color: white;
   }
@@ -356,6 +379,77 @@ nav{
 
 }
 
+#about{
+  background-color: #151723;
+
+  padding: 40px;
+
+  .logo{
+    display: block;
+    margin-bottom: 25px;
+    height: 50px;
+  }
+
+  .about-information p{
+    padding-bottom: 20px;
+    font-size: 17px;
+    line-height: 1.3;
+    color: white;
+  }
+
+.about-title{
+  text-align: center;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+
+}
+
+
+#footer{
+
+  background-color: #121013;
+  padding: 15px 0;
+
+  .footer-list{
+    text-align: right;
+    .footer-list-item{
+      display: inline-block;
+      color: white;
+      font-weight: 700;
+      margin-right: 15px;
+      a{
+        color: inherit;
+
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .footer-social{
+    a{
+      i{
+        width: 20px;
+        height: 20px;
+        color: white;
+
+      }
+    }
+  }
+
+  .footer-law{
+    color: #fff;
+    font-size: 15px;
+  }
+}
+
+
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1200px;
@@ -372,10 +466,34 @@ nav{
 
 @media (max-width: 991px){
 
-  nav .navbar-nav .nav-link {
+  #content .videos{
+
+    i{
+      font-size: 8px;
+    }
+    .post-view-count{
+      font-size: 8px;
+    }
+
+    .post-time{
+      font-size: 10px;
+    }
+
+
+    .post-title h2{
+      font-size: 13px;
+    }
+  }
+
+  nav .navbar-nav {
+
+    text-align: center;
+
+  .nav-link {
     font-size: 20px;
   }
 
+  }
   nav{
     margin-bottom: 20px;
   }
@@ -402,23 +520,55 @@ nav{
 }
 
 @media (max-width: 767px){
+
+  #content{
+    .social{
+      margin-bottom: 20px;
+    }
+  }
+
+  #content .videos{
+
+    i{
+      font-size: 14px;
+    }
+    .post-view-count{
+      font-size: 14px;
+    }
+
+    .post-time{
+      font-size: 14px;
+    }
+
+
+    .post-title h2{
+      font-size: 16px;
+    }
+  }
+
   #main a .item-info {
     margin-left: 25px;
+    margin-right: 10px;
+    width: 250px;
+
+    .view{
+
+    }
 
     .category-name{
-      font-size: 8px;
+      font-size: 10px;
     }
 
     .time{
-      font-size: 8px;
+      font-size: 10px;
     }
 
     h2 {
-      font-size: 8px;
+      font-size: 14px;
     }
 
     .view-count{
-      font-size: 8px;
+      font-size: 10px;
     }
   }
 
@@ -489,3 +639,4 @@ nav{
     }
   }
 }
+
