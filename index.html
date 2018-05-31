@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
     <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
@@ -16,8 +18,11 @@
 <div class="container">
 <nav class="navbar navbar-expand-lg">
     <a class="navbar-brand"  href="/"><img src="/images/logo.png" class="logo"  alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarsExample05">
+        <i class="fas fa-bars"></i>
+    </button>
 
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="#">Cəmiyyət</a>
@@ -50,8 +55,9 @@
                     <button class="fa fa-search dropdown-button drop"></button>
                     <div class="dropdown-content">
                         <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="dropdown-button bg-dark  fa fa-check " type="submit"></button>
+                            <div class="row">
+                            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                            <button class="dropdown-button fa fa-check " style="color: black" type="submit"></button>
                         </form>
                     </div>
                 </div>
@@ -73,8 +79,113 @@
 </div>
 
 
+<div class="container">
 <section id="main">
-        <div class="row">
+        <div class="row responsive">
+
+
+            <div class="col-md-4">
+                <div class="item">
+                    <a href="" class="item-image">
+                        <img src="images/football.jpg" alt="" class="img-fluid">
+                        <div class="item-info">
+                            <div class="view">
+                                <div class="view-count">
+                                    <i class="fa fa-eye"></i>
+                                    <span>10</span>
+                                </div>
+
+                                <h2>Əfran İsmayılov: Ölkə prezidentinin tənqidindən qaça bilmədim</h2>
+                                <div class="category-info">
+
+                                    <div class="row bottom">
+                                        <div class="category-name col-md-6">
+                                            Idman
+                                        </div>
+
+                                        <div class="time col-md-6 ml-auto">
+                                            <i class="far fa-clock"></i>
+
+
+                                            <span>30 May 2018, 16:43</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="item">
+                    <a href="" class="item-image">
+                        <img src="images/football.jpg" alt="" class="img-fluid">
+                        <div class="item-info">
+                            <div class="view">
+                                <div class="view-count">
+                                    <i class="fa fa-eye"></i>
+                                    <span>10</span>
+                                </div>
+
+                                <h2>Əfran İsmayılov: Ölkə prezidentinin tənqidindən qaça bilmədim</h2>
+                                <div class="category-info">
+
+                                    <div class="row bottom">
+                                        <div class="category-name col-md-6">
+                                            Idman
+                                        </div>
+
+                                        <div class="time col-md-6 ml-auto">
+                                            <i class="far fa-clock"></i>
+
+
+                                            <span>30 May 2018, 16:43</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="item">
+                    <a href="" class="item-image">
+                        <img src="images/football.jpg" alt="" class="img-fluid">
+                        <div class="item-info">
+                            <div class="view">
+                                <div class="view-count">
+                                    <i class="fa fa-eye"></i>
+                                    <span>10</span>
+                                </div>
+
+                                <h2>Əfran İsmayılov: Ölkə prezidentinin tənqidindən qaça bilmədim</h2>
+                                <div class="category-info">
+
+                                    <div class="row bottom">
+                                        <div class="category-name col-md-6">
+                                            Idman
+                                        </div>
+
+                                        <div class="time col-md-6 ml-auto">
+                                            <i class="far fa-clock"></i>
+
+
+                                            <span>30 May 2018, 16:43</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
             <div class="col-md-4">
                 <div class="item">
                     <a href="" class="item-image">
@@ -178,6 +289,8 @@
         </div>
     </div>
 </section>
+</div>
+
 
 
 <section id="content">
@@ -1048,7 +1161,9 @@
                             <div class="col-md-12">
                                 <div class="container social">
                                 <div class="row mt-4">
-                                        <div class="col-md-3"><a href=""><i class="fab fa-facebook-f"></i></a></div>
+                                        <div class="col-md-3"><a href=""><i class="fab fa-facebook-square"></i>
+
+                                        </a></div>
                                         <div class="col-md-3"><a href=""><i class="fab fa-twitter"></i></a></div>
                                         <div class="col-md-3"><a href=""><i class="fab fa-instagram"></i></a></div>
                                         <div class="col-md-3"><a href=""><i class="fab fa-youtube"></i></a></div>
@@ -1073,6 +1188,8 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 <script src="js/common.js"></script>
 </body>
 </html>

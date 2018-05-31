@@ -8,13 +8,22 @@ body {
 
 nav {
   background-color: white; }
+  nav .navbar-toggler {
+    background-color: #eee; }
+    nav .navbar-toggler:focus {
+      outline: none; }
+    nav .navbar-toggler .navbar-toggler-icon {
+      color: #333333; }
   nav .logo {
     height: 50px;
     display: block; }
   nav .navbar-nav .nav-link {
     color: #121117;
     font-size: 18px;
-    line-height: 24px; }
+    line-height: 24px;
+    transition: color 0.3s; }
+    nav .navbar-nav .nav-link:hover {
+      color: #c82333; }
   nav .ml-auto i.fab {
     font-size: 30px;
     margin-left: 15px; }
@@ -50,25 +59,67 @@ nav {
 #main .row .col-md-4 {
   padding-left: 8px;
   padding-right: 8px; }
+#main .slick-next {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  z-index: 30;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  background-color: transparent;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  background-color: #c82333;
+  transition: background-color 0.2s ease;
+  border: none;
+  cursor: pointer; }
+  #main .slick-next:hover {
+    background-color: #71141d; }
+  #main .slick-next:focus {
+    outline: none; }
+#main .slick-prev {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  z-index: 30;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  background-color: #c82333;
+  transition: background-color 0.2s ease;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer; }
+  #main .slick-prev:hover {
+    background-color: #71141d; }
+  #main .slick-prev:focus {
+    outline: none; }
 #main a {
   position: relative; }
   #main a:hover .item-info {
-    top: -30px; }
+    bottom: 40px; }
   #main a .item-info {
     position: absolute;
-    width: 80%;
     margin-left: 20px;
-    top: -15px;
+    width: 370px;
+    bottom: 20px;
     color: white;
     font-weight: 700;
-    transition: top 0.3s ease-in-out; }
+    transition: bottom 0.3s ease-in-out; }
     #main a .item-info h2 {
-      font-size: 20px;
-      margin-top: 20px; }
+      font-size: 16px;
+      margin-top: 16px; }
     #main a .item-info .category-name {
       border-left: 5px solid #0b2e13; }
     #main a .item-info .bottom {
-      margin-top: 30px; }
+      margin-top: 25px; }
 #main .item {
   background-color: black; }
   #main .item img {
@@ -152,11 +203,70 @@ nav {
 .social .fab {
   background-color: #eee;
   padding: 30px;
-  font-size: 25px;
-  color: #5a6268; }
+  font-size: 30px;
+  color: #5a6268;
+  transition: color, background-color 0.2s ease; }
+  .social .fab:hover {
+    background-color: #4e555b;
+    color: white; }
 
 @media (min-width: 1200px) {
   .container {
     max-width: 1200px; } }
+@media (max-width: 991px) {
+  #main a .item-info {
+    margin-left: 20px; }
+    #main a .item-info .category-name {
+      font-size: 11px; }
+    #main a .item-info .time {
+      font-size: 12px; }
+    #main a .item-info h2 {
+      font-size: 10px; }
+    #main a .item-info .view-count {
+      font-size: 12px; } }
+@media (max-width: 767px) {
+  #main a .item-info {
+    margin-left: 25px; }
+    #main a .item-info .category-name {
+      font-size: 8px; }
+    #main a .item-info .time {
+      font-size: 8px; }
+    #main a .item-info h2 {
+      font-size: 8px; }
+    #main a .item-info .view-count {
+      font-size: 8px; } }
+@media (max-width: 480px) {
+  #main a .item-info {
+    margin-left: 25px; }
+    #main a .item-info .category-name {
+      font-size: 14px; }
+    #main a .item-info .time {
+      font-size: 14px; }
+    #main a .item-info h2 {
+      font-size: 14px; }
+    #main a .item-info .view-count {
+      font-size: 14px; } }
+@media (max-width: 400px) {
+  #main a .item-info {
+    margin-left: 25px; }
+    #main a .item-info .category-name {
+      font-size: 12px; }
+    #main a .item-info .time {
+      font-size: 12px; }
+    #main a .item-info h2 {
+      font-size: 12px; }
+    #main a .item-info .view-count {
+      font-size: 12px; } }
+@media (max-width: 400px) {
+  #main a .item-info {
+    margin-left: 25px; }
+    #main a .item-info .category-name {
+      font-size: 10px; }
+    #main a .item-info .time {
+      font-size: 10px; }
+    #main a .item-info h2 {
+      font-size: 10px; }
+    #main a .item-info .view-count {
+      font-size: 10px; } }
 
 /*# sourceMappingURL=style.css.map */
