@@ -213,7 +213,16 @@ nav {
 @media (min-width: 1200px) {
   .container {
     max-width: 1200px; } }
+@media (max-width: 1115px) {
+  nav .navbar-nav .nav-link {
+    font-size: 12px; } }
 @media (max-width: 991px) {
+  nav .navbar-nav .nav-link {
+    font-size: 20px; }
+
+  nav {
+    margin-bottom: 20px; }
+
   #main a .item-info {
     margin-left: 20px; }
     #main a .item-info .category-name {
