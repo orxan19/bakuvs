@@ -64,6 +64,12 @@ nav {
     background-color: #28a745;
     color: white; }
 
+.card-img-top {
+  transition: all 0.3s; }
+
+.card-img-top:hover {
+  filter: opacity(0.6); }
+
 #main .row .col-md-4 {
   padding-left: 8px;
   padding-right: 8px; }
@@ -133,79 +139,79 @@ nav {
   #main .item img {
     opacity: 0.8; }
 
-#content {
+#content, #player {
   margin-top: 30px; }
-  #content .category-icon {
+  #content .category-icon, #player .category-icon {
     margin-right: 15px;
     color: #c82333; }
-  #content .category-more-icon {
+  #content .category-more-icon, #player .category-more-icon {
     font-size: 20px; }
-  #content .category-header {
+  #content .category-header, #player .category-header {
     border-bottom: 1px solid #eee; }
-  #content .category-more a {
+  #content .category-more a, #player .category-more a {
     color: black;
     font-size: 15px; }
-  #content .category-more a:hover {
+  #content .category-more a:hover, #player .category-more a:hover {
     text-decoration: none; }
-  #content .category-more span {
+  #content .category-more span, #player .category-more span {
     margin-left: 5px; }
-  #content .videos .col-md-4 {
+  #content .videos .col-md-4, #player .videos .col-md-4 {
     padding-left: 4px;
     padding-right: 4px;
     margin-top: 20px; }
-  #content .videos .post-view-count, #content .videos .post-time {
+  #content .videos .post-view-count, #content .videos .post-time, #player .videos .post-view-count, #player .videos .post-time {
     color: #949494;
     line-height: 16px;
     font-size: 13px; }
-  #content .videos .post-title h2 {
+  #content .videos .post-title h2, #player .videos .post-title h2 {
     font-size: 16px;
     line-height: 1.2;
     font-weight: 700;
     transition: color 0.3s ease-in-out; }
-    #content .videos .post-title h2:hover {
+    #content .videos .post-title h2:hover, #player .videos .post-title h2:hover {
       color: #c82333; }
-  #content .videos .card-body {
+  #content .videos .card-body, #player .videos .card-body {
     padding-bottom: 10px;
     padding-top: 10px; }
-  #content .videos a {
+  #content .videos a, #player .videos a {
     color: black; }
-    #content .videos a:hover {
+    #content .videos a:hover, #player .videos a:hover {
       text-decoration: none; }
-  #content .post-all {
+  #content .post-all, #player .post-all {
     margin-bottom: 20px; }
-  #content .category-name h3 {
+  #content .category-name h3, #player .category-name h3 {
     font-size: 24px; }
-  #content .category-name a {
+  #content .category-name a, #player .category-name a {
     color: black; }
-    #content .category-name a:hover {
+    #content .category-name a:hover, #player .category-name a:hover {
       text-decoration: none; }
-  #content .most-viewed-header {
+  #content .most-viewed-header, #player .most-viewed-header {
     margin-left: 10px; }
-    #content .most-viewed-header h2 {
+    #content .most-viewed-header h2, #player .most-viewed-header h2 {
       font-size: 24px; }
-    #content .most-viewed-header .most-viewed-icon {
+    #content .most-viewed-header .most-viewed-icon, #player .most-viewed-header .most-viewed-icon {
       margin-left: 20px;
       margin-right: 20px;
       color: #c82333; }
-  #content .post-view-count, #content .post-time {
+  #content .post-view-count, #content .post-time, #player .post-view-count, #player .post-time {
     color: #949494;
     line-height: 16px;
     font-size: 13px; }
-  #content .post-title h2 {
+  #content .post-title h2, #player .post-title h2 {
     font-size: 16px;
     line-height: 1.2;
     font-weight: 700;
     transition: color 0.3s ease-in-out; }
-    #content .post-title h2:hover {
+    #content .post-title h2:hover, #player .post-title h2:hover {
       color: #c82333; }
-  #content .card-body {
+  #content .card-body, #player .card-body {
     padding-bottom: 10px;
     padding-top: 10px; }
-  #content a {
+  #content a, #player a {
     color: black; }
-    #content a:hover {
+    #content a:hover, #player a:hover {
       text-decoration: none; }
-  #content .col-md-11.most-viewed-post {
+  #content .col-md-11.most-viewed-post, #player .col-md-11.most-viewed-post {
     margin-top: 20px; }
 
 .social .fab {
@@ -217,6 +223,26 @@ nav {
   .social .fab:hover {
     background-color: #4e555b;
     color: white; }
+
+#player #my-video {
+  width: 100%    !important;
+  height: 600px   !important; }
+#player .vjs-fullscreen #my-video {
+  height: 100% !important; }
+#player .player-header {
+  padding: 20px;
+  font-size: 25px; }
+#player .vjs-big-play-button {
+  top: 42%;
+  left: 42%; }
+#player .view-info {
+  font-size: 20px; }
+#player .thumbs {
+  font-size: 20px; }
+#player .share-header {
+  font-size: 15px; }
+#player .post-name {
+  font-size: 20px; }
 
 #about {
   background-color: #151723;
@@ -264,8 +290,16 @@ nav {
     max-width: 1200px; } }
 @media (max-width: 1115px) {
   nav .navbar-nav .nav-link {
-    font-size: 12px; } }
+    font-size: 12px; }
+
+  #player #my-video {
+    width: 100%    !important;
+    height: 410px   !important; } }
 @media (max-width: 991px) {
+  #player #my-video {
+    width: 100%    !important;
+    height: 380px   !important; }
+
   #content .videos i {
     font-size: 8px; }
   #content .videos .post-view-count {
@@ -294,6 +328,10 @@ nav {
     #main a .item-info .view-count {
       font-size: 12px; } }
 @media (max-width: 767px) {
+  #player #my-video {
+    width: 100%    !important;
+    height: 380px   !important; }
+
   #content .social {
     margin-bottom: 20px; }
 
