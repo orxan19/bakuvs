@@ -2,9 +2,19 @@ body {
   font-family: Raleway;
   overflow-x: hidden; }
 
-.centered {
-  max-width: 1250px;
-  margin: 0 auto; }
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px; }
+  #myBtn:focus {
+    box-shadow: none; }
 
 nav {
   background-color: white; }
@@ -73,48 +83,35 @@ nav {
 #main .row .col-md-4 {
   padding-left: 8px;
   padding-right: 8px; }
-#main .slick-next {
+#main .slick-prev, #main .slick-next {
   position: absolute;
+  z-index: 30;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  background-color: #dc3545;
+  border-radius: 3px;
+  color: white;
+  border: none;
+  cursor: pointer; }
+  #main .slick-prev:hover, #main .slick-next:hover {
+    background-color: #71141d; }
+  #main .slick-prev:focus, #main .slick-next:focus {
+    outline: none; }
+#main .slick-next {
   top: 50%;
   right: 0px;
-  z-index: 30;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 12px;
-  background-color: transparent;
-  background-color: blue;
-  color: white;
-  border-radius: 5px;
-  background-color: #c82333;
-  transition: background-color 0.2s ease;
-  border: none;
-  cursor: pointer; }
+  transition: background-color, right 0.2s ease-in-out; }
   #main .slick-next:hover {
-    background-color: #71141d; }
-  #main .slick-next:focus {
-    outline: none; }
+    right: -2px; }
 #main .slick-prev {
-  position: absolute;
   top: 50%;
   left: 0px;
-  z-index: 30;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 12px;
-  background-color: #c82333;
-  transition: background-color 0.2s ease;
-  border-radius: 5px;
-  color: white;
-  border: none;
-  cursor: pointer; }
+  transition: background-color, left 0.2s ease-in-out; }
   #main .slick-prev:hover {
-    background-color: #71141d; }
-  #main .slick-prev:focus {
-    outline: none; }
+    left: -2px; }
 #main a {
   position: relative; }
   #main a:hover .item-info {
@@ -135,9 +132,13 @@ nav {
     #main a .item-info .bottom {
       margin-top: 25px; }
 #main .item {
-  background-color: black; }
+  background-color: black;
+  background-position: bottom; }
+  #main .item:hover img {
+    opacity: 0.9; }
   #main .item img {
-    opacity: 0.8; }
+    opacity: 0.7;
+    transition: opacity 0.3s ease-out; }
 
 #content, #player {
   margin-top: 30px; }
@@ -148,13 +149,20 @@ nav {
     font-size: 20px; }
   #content .category-header, #player .category-header {
     border-bottom: 1px solid #eee; }
-  #content .category-more a, #player .category-more a {
-    color: black;
-    font-size: 15px; }
-  #content .category-more a:hover, #player .category-more a:hover {
-    text-decoration: none; }
-  #content .category-more span, #player .category-more span {
-    margin-left: 5px; }
+  #content .category-more, #player .category-more {
+    transition: margin-right 0.3s ease; }
+    #content .category-more:hover a, #player .category-more:hover a {
+      color: #c82333; }
+    #content .category-more:hover, #player .category-more:hover {
+      margin-right: -10px; }
+    #content .category-more a, #player .category-more a {
+      color: black;
+      transition: color 0.3s ease;
+      font-size: 15px; }
+    #content .category-more a:hover, #player .category-more a:hover {
+      text-decoration: none; }
+    #content .category-more span, #player .category-more span {
+      margin-left: 5px; }
   #content .videos .col-md-4, #player .videos .col-md-4 {
     padding-left: 4px;
     padding-right: 4px;
@@ -168,8 +176,8 @@ nav {
     line-height: 1.2;
     font-weight: 700;
     transition: color 0.3s ease-in-out; }
-    #content .videos .post-title h2:hover, #player .videos .post-title h2:hover {
-      color: #c82333; }
+  #content .videos .card:hover .post-title h2, #player .videos .card:hover .post-title h2 {
+    color: #c82333; }
   #content .videos .card-body, #player .videos .card-body {
     padding-bottom: 10px;
     padding-top: 10px; }
@@ -186,9 +194,13 @@ nav {
     #content .category-name a:hover, #player .category-name a:hover {
       text-decoration: none; }
   #content .most-viewed-header, #player .most-viewed-header {
-    margin-left: 10px; }
+    margin-left: 10px;
+    transition: color 0.3s ease-in-out; }
+    #content .most-viewed-header:hover, #player .most-viewed-header:hover {
+      color: #c82333; }
     #content .most-viewed-header h2, #player .most-viewed-header h2 {
-      font-size: 24px; }
+      font-size: 24px;
+      cursor: default; }
     #content .most-viewed-header .most-viewed-icon, #player .most-viewed-header .most-viewed-icon {
       margin-left: 20px;
       margin-right: 20px;
@@ -211,18 +223,27 @@ nav {
     color: black; }
     #content a:hover, #player a:hover {
       text-decoration: none; }
-  #content .col-md-11.most-viewed-post, #player .col-md-11.most-viewed-post {
+  #content .col-md-12.most-viewed-post, #player .col-md-12.most-viewed-post {
     margin-top: 20px; }
 
 .social .fab {
   background-color: #eee;
-  padding: 30px;
-  font-size: 30px;
+  padding: 20px;
+  font-size: 20px;
   color: #5a6268;
-  transition: color, background-color 0.2s ease; }
-  .social .fab:hover {
-    background-color: #4e555b;
-    color: white; }
+  transition: color 0.2s ease, background-color 0.2s ease; }
+.social .fab:hover.fa-twitter {
+  background-color: #0b2e13;
+  color: white; }
+.social .fab:hover.fa-instagram {
+  background-color: #062c33;
+  color: white; }
+.social .fab:hover.fa-youtube {
+  background-color: #c82333;
+  color: white; }
+.social .fab:hover.fa-facebook-square {
+  background-color: #005cbf;
+  color: white; }
 
 #player #my-video {
   width: 100%    !important;
@@ -266,29 +287,42 @@ nav {
 #footer {
   background-color: #121013;
   padding: 15px 0; }
-  #footer .footer-list {
-    text-align: right; }
-    #footer .footer-list .footer-list-item {
-      display: inline-block;
-      color: white;
-      font-weight: 700;
-      margin-right: 15px; }
-      #footer .footer-list .footer-list-item a {
-        color: inherit; }
-        #footer .footer-list .footer-list-item a:hover {
-          text-decoration: none; }
+  #footer .footer-list .footer-list-item {
+    display: inline-block;
+    color: white;
+    font-weight: 700;
+    margin-right: 20px; }
+    #footer .footer-list .footer-list-item a {
+      color: inherit;
+      transition: color 0.3s ease-in-out; }
+      #footer .footer-list .footer-list-item a:hover {
+        color: #c82333;
+        text-decoration: none; }
   #footer .footer-social a i {
-    width: 20px;
-    height: 20px;
-    color: white; }
+    padding: 10px;
+    color: white;
+    font-size: 20px; }
   #footer .footer-law {
     color: #fff;
     font-size: 15px; }
 
+@media (min-width: 1360px) {
+  .container {
+    max-width: 1200px; } }
 @media (min-width: 1200px) {
   .container {
     max-width: 1200px; } }
+@media (max-width: 1200px) {
+  nav .navbar-nav .nav-link {
+    font-size: 12px; } }
 @media (max-width: 1115px) {
+  #content .social .fab {
+    padding: 20px;
+    font-size: 20px; }
+
+  #content .most-viewed-header h2 {
+    font-size: 16px; }
+
   nav .navbar-nav .nav-link {
     font-size: 12px; }
 
@@ -296,16 +330,23 @@ nav {
     width: 100%    !important;
     height: 410px   !important; } }
 @media (max-width: 991px) {
+  #content .social .fab {
+    padding: 16px;
+    font-size: 16px; }
+
+  #content .most-viewed-header h2 {
+    font-size: 16px; }
+
   #player #my-video {
     width: 100%    !important;
     height: 380px   !important; }
 
   #content .videos i {
-    font-size: 8px; }
+    font-size: 12px; }
   #content .videos .post-view-count {
-    font-size: 8px; }
+    font-size: 14px; }
   #content .videos .post-time {
-    font-size: 10px; }
+    font-size: 15px; }
   #content .videos .post-title h2 {
     font-size: 13px; }
 
@@ -328,6 +369,16 @@ nav {
     #main a .item-info .view-count {
       font-size: 12px; } }
 @media (max-width: 767px) {
+  #footer .footer-list-item {
+    font-size: 12px; }
+
+  #content .social .fab {
+    padding: 14px;
+    font-size: 14px; }
+
+  #content .most-viewed-header h2 {
+    font-size: 14px; }
+
   #player #my-video {
     width: 100%    !important;
     height: 380px   !important; }
@@ -357,6 +408,13 @@ nav {
     #main a .item-info .view-count {
       font-size: 10px; } }
 @media (max-width: 480px) {
+  #content .social .fab {
+    padding: 11px;
+    font-size: 12px; }
+
+  #content .most-viewed-header h2 {
+    font-size: 12px; }
+
   #main a .item-info {
     margin-left: 25px; }
     #main a .item-info .category-name {

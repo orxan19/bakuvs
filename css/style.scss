@@ -3,9 +3,22 @@ body{
   overflow-x: hidden;
 }
 
-.centered{
-  max-width: 1250px;
-  margin: 0 auto;
+
+#myBtn{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:focus{
+    box-shadow: none;
+  }
 }
 
 nav{
@@ -130,59 +143,60 @@ nav{
     }
   }
 
-  .slick-next {
+
+
+
+  .slick-prev, .slick-next{
     position: absolute;
-    top: 50%;
-    right: 0px;
     z-index: 30;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 12px;
-    background-color: transparent;
-    background-color: blue;
-    color: white;
-    border-radius: 5px;
-    background-color: #c82333;
-    transition: background-color 0.2s ease;
-    border: none;
-    cursor: pointer;
-
-    &:hover {
-      background-color: darken(#c82333, 20%);
-    }
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  .slick-prev{
-    position: absolute;
-    top: 50%;
-    left: 0px;
-    z-index: 30;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 12px;
-    background-color: #c82333;
-    transition: background-color 0.2s ease;
-    border-radius: 5px;
+    background-color: #dc3545;
+    border-radius: 3px;
     color: white;
     border: none;
     cursor: pointer;
 
     &:hover{
       background-color: darken(#c82333, 20%);
+
     }
 
     &:focus{
       outline: none;
     }
   }
+
+  .slick-next {
+    top: 50%;
+    right: 0px;
+
+    transition: background-color, right 0.2s ease-in-out;
+
+    &:hover{
+      right: -2px;
+
+    }
+  }
+
+
+  .slick-prev{
+    top: 50%;
+    left: 0px;
+
+    transition: background-color, left 0.2s ease-in-out;
+
+
+    &:hover{
+      left: -2px;
+
+    }
+  }
+
+
   a{
     position: relative;
 
@@ -216,11 +230,20 @@ nav{
   }
 
   .item{
-    background-color: black;
 
-    img{
-      opacity: 0.8
+    background-color: black;
+    background-position: bottom;
+
+    &:hover img{
+      opacity: 0.9;
     }
+
+    img {
+      opacity: 0.7;
+      transition: opacity 0.3s ease-out;
+    }
+
+
   }
 
 }
@@ -244,8 +267,22 @@ nav{
 
   .category-more{
 
+    transition: margin-right 0.3s ease;
+
+    &:hover a{
+      color: #c82333;
+
+    }
+
+    &:hover{
+      margin-right: -10px;
+
+    }
+
+
     a{
       color: black;
+      transition: color 0.3s ease;
       font-size: 15px;
     }
     a:hover{
@@ -255,6 +292,7 @@ nav{
 
     span{
       margin-left: 5px;
+
     }
   }
 
@@ -278,9 +316,10 @@ nav{
       font-weight: 700;
       transition: color 0.3s ease-in-out;
 
-      &:hover{
-        color: #c82333;
-      }
+    }
+
+    .card:hover .post-title h2{
+      color: #c82333;
     }
 
     .card-body{
@@ -317,9 +356,17 @@ nav{
 
   .most-viewed-header{
     margin-left: 10px;
+    transition: color 0.3s ease-in-out;
+
+
+
+    &:hover{
+      color: #c82333;
+    }
 
     h2{
       font-size: 24px;
+      cursor: default;
     }
 
     .most-viewed-icon{
@@ -360,21 +407,40 @@ nav{
     }
   }
 
-  .col-md-11.most-viewed-post{
+  .col-md-12.most-viewed-post{
     margin-top: 20px;
   }
 }
 
 .social{
+
   .fab {
     background-color: #eee;
-    padding: 30px;
-    font-size: 30px;
+    padding: 20px;
+    font-size: 20px;
     color: #5a6268;
-    transition: color, background-color 0.2s ease;
+    transition: color 0.2s ease, background-color 0.2s ease;
+  }
 
-    &:hover{
-      background-color: #4e555b;
+  .fab:hover{
+    &.fa-twitter{
+      background-color: #0b2e13;
+      color: white;
+
+    }
+
+    &.fa-instagram{
+      background-color: #062c33;
+      color: white;
+    }
+
+    &.fa-youtube{
+      background-color: #c82333;
+      color: white;
+    }
+
+    &.fa-facebook-square{
+      background-color: #005cbf;
       color: white;
     }
   }
@@ -459,16 +525,18 @@ nav{
   padding: 15px 0;
 
   .footer-list{
-    text-align: right;
+
     .footer-list-item{
       display: inline-block;
       color: white;
       font-weight: 700;
-      margin-right: 15px;
+      margin-right: 20px;
       a{
         color: inherit;
+        transition: color 0.3s ease-in-out;
 
         &:hover{
+          color: #c82333;
           text-decoration: none;
         }
       }
@@ -478,10 +546,9 @@ nav{
   .footer-social{
     a{
       i{
-        width: 20px;
-        height: 20px;
+        padding: 10px;
         color: white;
-
+        font-size: 20px;
       }
     }
   }
@@ -492,17 +559,45 @@ nav{
   }
 }
 
-
-
-@media (min-width: 1200px) {
+@media (min-width: 1360px) {
   .container {
     max-width: 1200px;
   }
 
 }
 
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+
+
+
+}
+
+@media (max-width: 1200px)
+{
+  nav .navbar-nav .nav-link {
+    font-size: 12px;
+  }
+}
 // Responsive
 @media (max-width: 1115px){
+
+  #content{
+    .social{
+      .fab {
+        padding: 20px;
+        font-size: 20px;
+      }
+    }
+  }
+
+
+  #content .most-viewed-header h2 {
+    font-size: 16px;
+  }
+
   nav .navbar-nav .nav-link {
     font-size: 12px;
   }
@@ -518,6 +613,19 @@ nav{
 
 @media (max-width: 991px){
 
+  #content{
+    .social{
+      .fab {
+        padding: 16px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  #content .most-viewed-header h2 {
+    font-size: 16px;
+  }
+
   #player{
     #my-video {
       width: 100%    !important;
@@ -528,14 +636,14 @@ nav{
   #content .videos{
 
     i{
-      font-size: 8px;
+      font-size: 12px;
     }
     .post-view-count{
-      font-size: 8px;
+      font-size: 14px;
     }
 
     .post-time{
-      font-size: 10px;
+      font-size: 15px;
     }
 
 
@@ -579,6 +687,25 @@ nav{
 }
 
 @media (max-width: 767px){
+
+  #footer{
+    .footer-list-item{
+      font-size: 12px;
+    }
+  }
+
+  #content{
+    .social{
+      .fab {
+        padding: 14px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  #content .most-viewed-header h2{
+    font-size: 14px;
+  }
 
   #player{
     #my-video {
@@ -641,6 +768,23 @@ nav{
 }
 
 @media (max-width: 480px){
+
+  #content{
+    .social{
+      .fab {
+        padding: 11px;
+        font-size: 12px;
+      }
+    }
+  }
+
+
+  #content .most-viewed-header h2{
+    font-size: 12px;
+  }
+
+
+
   #main a .item-info {
     margin-left: 25px;
 
